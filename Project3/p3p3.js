@@ -8,9 +8,9 @@ function draw() {
 
 
 for (let i = 0; i < 6; ++ i){
-    if i = 0 {
+    if (i = 0) {
         square(10, 10, 100);
     }
-    else if i = 1 {square(10, 30, 100);}
+    else if (i = 1) {square(10, 30, 100);}
 }
 }
