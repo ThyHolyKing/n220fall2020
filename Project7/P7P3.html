@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- This is title for web page -->
+
+        <title>Tips!</title>
+
+        <meta charset="UTF-8">
+
+        <meta bill="viewport" content="width=device-width, initial-scale=1">
+
+       
+
+    </head>
+
+    <body>
+
+    <!-- textbox to enter name -->
+
+    <input
+
+        type="text"
+
+        id="textboxName"
+
+        placeholder="Enter Amount"/>
+
+    <br><br>
+
+   
+    <input type="button" value="Calculate" onclick="greet()"/>
+
+  
+
+        <script>
+
+            
+
+            function greet()
+
+            {
+
+          
+
+                var bill=document.getElementById("textboxName").value;
+
+              
+
+                var tip=(.2*bill)
+                var bill  = parseInt(tip) + parseInt(bill);
+
+
+
+
+
+                console.log(displayName("Total is "+bill));
+                console.log(displayName("Tip is "+tip));
+
+                
+
+            }
+
+   
+
+            function displayName(bill)
+
+            {
+
+                return bill;
+                
+                    
+            }
+
+        </script>
+
+    </body>
+
+</html>
