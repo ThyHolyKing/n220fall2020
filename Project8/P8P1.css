@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    height: 100vh;
+    width: 100%;
+    background-color: lightgrey;
+    position: relative;
+  }
+  .box{
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
