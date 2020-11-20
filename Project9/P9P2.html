@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bad Word Counter</title>
+    <style>
+     .container {
+     width: 100vw;
+     text-align: center;
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <label for="sentence">Enter the sentence: </label>
+        <input type="text" id="sent" name="sentence"><br><br>   
+            <button id="sent" type="submit" onclick="myevaluate()">CHECK</button>
+        <p class="message"></p>     
+    </div>
+    <script>
+        let badwords = ["clear","water","tires"];
+        let count;
+        function myevaluate(){
+            count = 0;
+            let text = "";        
+            text = document.getElementById("sent").value;
+            let words = [];
+                        words = text.split(" ");  
+
+            for(let i = 0; i < badwords.length; i++) {
+                for(let j = 0; j < words.length; j++){
+                    if(words[j] == badwords[i]) {
+                        count++;
+              }
+             }
+            }
+
+            if (count == 0) {
+                document.querySelector(".message").innerHTML = "No bad word found";
+            }
+            else {
+                document.querySelector(".message").innerHTML = "Bad word found<br>Total bad words : " + count;
+            }
+            document.getElementById("sent").value = "";
+        };
+    </script>
+</body>
+</html>
