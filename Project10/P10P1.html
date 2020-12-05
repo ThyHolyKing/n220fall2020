@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Project</title>
+    <style>
+        div
+        {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            float: left;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="one" data-color="red" onclick="fun(this)"></div>
+    <div id="two" data-color="green" onclick="fun(this)"></div>
+    <div id="three" data-color="blue" onclick="fun(this)"></div>
+    <script>
+        function fun(e){
+            var ele = document.getElementById(e.id);
+            ele.style.backgroundColor = ele.dataset.color;
+        }
+    </script>
+</body>
+</html>
