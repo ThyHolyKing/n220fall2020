@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>my title</title>
+   <style>
+       
+       
+       #buttons{
+           width: 300px;
+           margin: 10px 15%;
+           display: flex;
+           flex-direction: column;  
+           justify-content: center;
+       }
+       button{
+           margin: 10px;
+           width: 50px;
+           height: 25px;
+       }
+       #current_color{
+           height: 40px;
+           width: 70%;
+           margin: 20px auto;
+           border: 1px solid #ddd;
+           text-align: center;line-height: 2px;
+       }
+       #color_box{
+           height: 200px;
+           width: 70%;
+           margin: 20px auto;
+           background-color: rgb(0,0,0);
+       }
+   </style>
+</head>
+<body>
+   <!-- div for change color -->
+   <div id="color_box"></div>
+   <!-- div to show current current calculated rgb color -->
+   <div id="current_color">
+       <h2>current color:rgb(<span id="rgb_value"></span>)</h2>
+   </div>
+   <!-- div for buttons -->
+   <div id="buttons">
+       <!-- including buttons inside table for better and easy formatting -->
+       <!-- NOTE: all styling can be change easily if needed -->
+       <table>
+           <tr>
+               <td>Red:</td>
+               <td><button onclick="red_1()">+1</button></td>
+               <td><button onclick="red_5()">+5</button></td>
+               <td><button onclick="red_10()">+10</button></td>
+           </tr>
+           <tr>
+               <td>Green:</td>
+               <td><button onclick="green_1()">+1</button></td>
+               <td><button onclick="green_5()">+5</button></td>
+               <td><button onclick="green_10()">+10</button></td>
+           </tr>
+           <tr>
+               <td>Blue:</td>
+               <td><button onclick="blue_1()">+1</button></td>
+               <td><button onclick="blue_5()">+5</button></td>
+               <td><button onclick="blue_10()">+10</button></td>
+           </tr>
+       </table>
+   </div>
+
+   <script>
+    // variables to store rgb value
+    let red = 0, green = 0, blue = 0;
+    // wrting initial rgb value inside a span tag with id rgb_value
+    document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+
+    // defining function red_1 for red +1 button
+    function red_1(){
+        // incrementing value of red by 1
+        red += 1;
+        // setting style backgroundColor to new rgb value
+        document.getElementById("color_box").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+        // writing new rgb value
+        document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+    }
+
+    // similarly defining function for remaining 2 buttons of red
+    function red_5(){
+        red += 5;
+        document.getElementById("color_box").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+        document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+    }
+    function red_10(){
+        red += 10;
+        document.getElementById("color_box").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+        document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+    }
+    // defining functions for green buttons similar to red
+    function green_1(){
+        green +=1;
+        document.getElementById("color_box").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+        document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+    }
+    function green_5(){
+        green +=5;
+        document.getElementById("color_box").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+        document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+    }
+    function green_10(){
+        green +=10;
+        document.getElementById("color_box").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+        document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+    }
+    // defining functions for blue buttons similarly
+    function blue_1(){
+        blue +=1;
+        document.getElementById("color_box").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+        document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+    }
+    function blue_5(){
+        blue +=5;
+        document.getElementById("color_box").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+        document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+    }
+    function blue_10(){
+        blue +=10;
+        document.getElementById("color_box").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+        document.getElementById("rgb_value").innerHTML = `${red},${green},${blue}`;
+    }
+// end of javascript
+</script>
+</body>
+</html>
