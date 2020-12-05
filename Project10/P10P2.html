@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Simple Question And Answer</title></head>
+<body>
+<h2>What is the capital of Indiana?</h2><!-- Simple tag to display Question -->
+<button id="Indianapolis" onclick="myFunction(this.id)">Indianapolis</button><!-- Button code -->
+<button id="WashingTone" onclick="myFunction(this.id)">WashingTone</button><!-- Button code -->
+<button id="New York" onclick="myFunction(this.id)">New York</button><!-- Button code -->
+<div id="answer"><div><!-- Here is div tag which will display our answer -->
+
+<!-- script starts from here -->
+<script>
+function myFunction(clicked) {
+if (clicked=="Indianapolis")//here it check if value is correct
+document.getElementById("answer").innerHTML = "It is Right Answer ::"+clicked; //message to div for user
+else
+document.getElementById("answer").innerHTML = "You have Choose Incorrect.True Answer is ::Indianapolis"; //message to div for user
+}        
+
+</script>
+</body>
+</html>
